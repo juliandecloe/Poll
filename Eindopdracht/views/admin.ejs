@@ -1,0 +1,38 @@
+<%- include('./partials/head') %>
+
+<%- include('./partials/header') %>
+<main class="admin">
+    <nav>
+        <h2>Create a poll</h2>
+        <a href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" viewBox="0 0 20.259 20.525">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectangle_20" data-name="Rectangle 20" width="20.259" height="20.525" fill="#391599"/>
+                  </clipPath>
+                </defs>
+                <g id="Group_20" data-name="Group 20" clip-path="url(#clip-path)">
+                  <path id="Path_7" data-name="Path 7" d="M1.825,12.155a.663.663,0,0,1-.475-.2L.2,10.78a.692.692,0,0,1,0-.966L9.648.2a.666.666,0,0,1,.486-.2.65.65,0,0,1,.476.2l9.452,9.616a.692.692,0,0,1,0,.966l-1.155,1.175a.664.664,0,0,1-.949,0L10.13,3.99,2.3,11.955a.663.663,0,0,1-.475.2M10.132.615a.073.073,0,0,0-.056.019L.624,10.25a.069.069,0,0,0,0,.1L1.778,11.52a.067.067,0,0,0,.094,0l8.257-8.4,8.257,8.4a.058.058,0,0,0,.094,0l1.155-1.175a.069.069,0,0,0,0-.1L10.183.634a.063.063,0,0,0-.048-.019Z" transform="translate(0 0)" fill="#391599"/>
+                  <path id="Path_8" data-name="Path 8" d="M44.307,97.259H40.638a.366.366,0,0,1-.363-.369V92.749H36.594V96.89a.366.366,0,0,1-.363.369H32.562a.366.366,0,0,1-.363-.369V87.869a.363.363,0,1,1,.726,0v8.652h2.944V92.38a.366.366,0,0,1,.363-.369h4.407A.366.366,0,0,1,41,92.38v4.142h2.944V87.869a.363.363,0,1,1,.726,0V96.89a.366.366,0,0,1-.363.369" transform="translate(-28.305 -76.735)" fill="#391599"/>
+                </g>
+              </svg>                     
+        </a>
+    </nav>
+    <form method="post" enctype="application/x-www-form-urlencoded" action="/admin">
+      <fieldset>
+        <label for="creator">Creator</label>
+        <input type="text" name="creator" id="creator" maxlength="25" placeholder="Max. 25 characters">
+      </fieldset>
+      <fieldset>
+          <label for="question">Vraag</label>
+          <input type="text" name="question" id="question" maxlength="110" placeholder="Max. 110 characters" required/>
+          <label for="answerA">Antwoord A</label>
+          <input type="text" name="answerA" id="answerA" maxlength="50" placeholder="Max. 50 characters" required/>
+          <label for="answerB">Antwoord B</label>
+          <input type="text" name="answerB" id="answerB" maxlength="50" placeholder="Max. 50 characters" required/>
+          <button type="submit">Publiceer</button>
+      </fieldset>
+    </form>
+</main>
+
+<%- include('./partials/foot') %>

@@ -1,0 +1,227 @@
+* {
+    font-family: 'Raleway', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    padding: 1rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    padding: 4rem 5vw 0 5vw;
+    width: 80vw;
+    min-width: 50vw;
+    max-width: 30rem;
+}
+
+header a {
+    text-decoration: none;
+    color: #391599; 
+}
+
+h1 {
+    font-weight: bold;
+    padding-bottom: 4px;
+    border-bottom: 4px solid #391599;
+}
+
+h2 {
+    margin: 1rem 0;
+    color: #391599; 
+}
+
+form {
+    margin-bottom: 2rem;
+}
+
+.admin label {
+    color: #391599; 
+    font-weight: 600;
+    width: 100%;
+    margin-bottom: .5rem;
+    display: inline-block;
+}
+
+.admin input {
+    padding: .7rem;
+    border: 1px solid #391599;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
+    box-sizing: border-box;
+}
+
+.admin fieldset {
+    padding: 1rem;
+}
+
+.admin fieldset input {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.admin fieldset button {
+    display: block;
+    width: 100%;
+    background-color: #391599;
+    color: white;
+    padding: .7rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.admin fieldset button:hover {
+    background-color: #5c29eb;
+}
+
+fieldset {
+    border: 2px solid #391599;
+    border-radius: 25px;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+fieldset h3 {
+    height: 5rem;
+    padding: 0 1rem;
+}
+
+@media (max-width: 420px) {
+    fieldset h3 {
+        min-height: 5rem;
+        height: auto;
+        padding: 0 1rem;
+    }
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.author svg {
+    margin-right: .5rem;
+}
+
+.answers input {
+    height: 4rem;
+    position: absolute;
+    width: 46%;
+    appearance: none;
+    pointer-events: none;
+}
+
+*:focus {
+    outline: 3px solid yellow;
+}
+
+*:hover {
+    outline: none;
+}
+
+.answers input:first-of-type {
+    left: 0;
+}
+
+.answers input:last-of-type {
+    right: 0;
+}
+
+.answers label {
+    width: 46%;
+    height: 4rem;
+    padding: .2rem;
+    border: none;
+    background-color: #391599;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.answers label:hover {
+    background-color: #5c29eb;
+}
+
+.answers label:first-of-type {
+    border-radius: 0 0 0 23px;
+}
+
+.answers label:last-of-type {
+    border-radius: 0 0 23px 0;
+}
+
+.answers {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+footer {
+    padding: 2rem 0 4rem 0;
+}
+
+.results h3 {
+    margin: 2rem 0;
+}
+
+.results label {
+    font-weight: 600;
+    width: 100%;
+    margin-bottom: .5rem;
+    display: inline-block;
+}
+
+progress {
+    margin-bottom: 3rem;
+    background-color: white;
+    border: none;
+    width: 100%;
+    height: 2rem;
+    overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+    margin-bottom: 3rem;
+    background-color: white;
+    border: 3px solid #391599;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+progress::-webkit-progress-value {
+    margin-bottom: 3rem;
+    background-color: #391599; 
+}
+
+
+
