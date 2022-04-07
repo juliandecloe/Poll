@@ -20,9 +20,9 @@
     </nav>
     <h3><%- data.question %></h3>
     <label for="answerA"><%- data.answerA %></label>
-    <progress id="answerA" value="<%- ((votesA - votesB ) / votesB) * 100 %>" max="100"><%- (votesA / votesB) * 100 %></progress>
+    <progress id="answerA" value="<%- (votesA / (votesA + votesB )) * 100 %>" max="100"><%- (votesA / votesB) * 100 %></progress>
     <label for="answerB"><%- data.answerB %></label>
-    <progress id="answerB" value="<%- (votesB / votesA) * 100 %>" max="100"><%- (votesB / votesA) * 100 %></progress>   
+    <progress id="answerB" value="<%- (votesB / (votesA + votesB )) * 100 %>" max="100"><%- (votesB / votesA) * 100 %></progress>   
 </main>
 
 <%- include('./partials/foot') %>
