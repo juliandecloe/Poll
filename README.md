@@ -27,7 +27,11 @@ In the wireflow above you can see the most important functionalities of the webs
 
 It doesn't matter if javascript or css is disabled. These functions should always work on the website no matter what. If these functions work you got yourself a beautiful poll website right? Well... yes, but wouldn't it be way more beautiful if the website looks cooler and has some cool extra features? Of course it would, so keep on reading!
 
-![Core Home](proces/core-home.png) ![Core Home](proces/core-admin.png) ![Core Home](proces/core-results.png)
+<p float="left">
+  <img src="/proces/core-home.png" width="100" />
+  <img src="/proces/core-admin.png" width="100" /> 
+  <img src="/proces/core-results.png" width="100" />
+</p>
 
 ## Progressive Enhancement
 
