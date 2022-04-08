@@ -4,7 +4,7 @@
   "description": "An app for students and teachers to create and answer polls",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
