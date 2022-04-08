@@ -106,7 +106,7 @@ Browsers have a lot of features, but not all browsers have the same features. Th
 
 There is a great website, [Can I Use?](https://caniuse.com/), that shows you what features ar supported on what browsers. During this project I used this site a **LOT** to check if I could use for example a specific selector, property, value, function, etc. So I programmed really carefully to make sure that most things that I use are actually supported on most browsers.
 
-### Appearance
+### CSS: Appearance
 The CSS property `appearance` is quite well supported following the advise of [Can I Use?](https://caniuse.com/). The only problem I saw, was that on safari the appearance wasn't hidden using `appearance: none;`. On [Stack Overflow](https://stackoverflow.com/questions/47127201/webkit-appearance-none-not-working-for-button) someone had the same problem. Luckely there was a simple answer. I just had to add the `webkit` & `moz` versions as well to make sure it was supported on every device. It looks as following:
 ```
 -webkit-appearance: none;
@@ -114,8 +114,30 @@ The CSS property `appearance` is quite well supported following the advise of [C
 appearance: none;
 ```
 
+### HTML: Progress
+Nowadays the HTML element `<progress>` is very well supported. The only problem is: it is a new element! So the first browser version of a lot of browsers does not support it. There actually are people still using that type of browser. There is no direct solution in HTML and CSS. I could also make a custom progress bar, but because of time instances I wasn't able to do so. 
 
+**The HTML of the progressbar looks like this:**
+```
+<progress id="answerA" value="40" max="100"> 40% </progress>
+```
 
+**The CSS of the progressbar looks like this:**
+```
+progress: { 
+    'styling'
+}
+
+progress::-webkit-progress-bar { 
+    'styling'
+}
+
+progress::-webkit-progress-bar-value { 
+    'styling'
+}
+```
+
+Note that the progressbar itself is supported by [Firefox](https://www.mozilla.org/nl/firefox/new/) and Internet Explorer, but styling sadly isn't. It has a default styling that can't be changed. But on every other browser you can!
 
 
 
