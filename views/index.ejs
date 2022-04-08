@@ -50,10 +50,11 @@
                 <% }%>
             </div>
             <div class="answers">
-                <input onclick="submit()" type="checkbox" id="<%- item.answerA %>" class="A" value="<%- item.answerA %>" name="answer">
+                <input type="radio" id="<%- item.answerA %>" class="A" value="<%- item.answerA %>" name="answer" required/>
                 <label for="<%- item.answerA %>"><%- item.answerA %></label>
-                <input onclick="submit()" type="checkbox" id="<%- item.answerB %>" class="B" value="<%- item.answerB %>" name="answer">
+                <input type="radio" id="<%- item.answerB %>" class="B" value="<%- item.answerB %>" name="answer" required/>
                 <label for="<%- item.answerB %>"><%- item.answerB %></label>
+                <button type="submit">Submit vote</button>
             </div>
         </fieldset>
     </form>

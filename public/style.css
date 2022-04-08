@@ -204,30 +204,22 @@ fieldset h3 {
     height: 4rem;
     position: absolute;
     width: 46%;
-    z-index: -1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     pointer-events: none;
     border: none;
 }
 
-@supports (appearance: none) {
+@supports not (appearance: none) {
     .answers input {
         height: 4rem;
         position: absolute;
         width: 46%;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
+        z-index: -1;
         pointer-events: none;
         border: none;
     }
-}
-
-*:focus {
-    outline: 3px solid rgb(228, 172, 70);
-}
-
-*:hover {
-    outline: none;
 }
 
 .answers input:first-of-type {
@@ -239,7 +231,7 @@ fieldset h3 {
 }
 
 .answers label {
-    width: 46%;
+    width: 40%;
     height: 4rem;
     padding: .2rem;
     border: none;
@@ -255,13 +247,37 @@ fieldset h3 {
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
+    margin: 0 1rem 1rem 1rem;
+}
+
+@media (max-width: 485px) {
+    .answers label {
+        width: 100%;
+    }
+}
+
+
+.answers button {
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+    height: 3rem;
+    border: none;
+    background-color: #391599;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.answers button:hover {
+    background-color: #5c29eb;
 }
 
 .darkmode .answers label {
     background-color: #987ce2;
 }
 
-.answers label:hover {
+.answers label:hover, .answers input[type="radio"]:checked + label {
     background-color: #5c29eb;
 }
 
@@ -269,17 +285,10 @@ fieldset h3 {
     background-color: #cabcf0;
 }
 
-.answers label:first-of-type {
-    border-radius: 0 0 0 23px;
-}
-
-.answers label:last-of-type {
-    border-radius: 0 0 23px 0;
-}
-
 .answers {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
 }
