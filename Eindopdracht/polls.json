@@ -16,6 +16,7 @@
       "Ja, deze guy is een legend",
       "Ja, deze guy is een legend",
       "Ja, deze guy is een legend",
+      "Nee, deze guy is een legend",
       "Nee, deze guy is een legend"
     ]
   },
@@ -96,6 +97,9 @@
     "question": "Hoeveel zin heb je in de zomer?",
     "answerA": "Niet zoveel",
     "answerB": "Alsjeblieft geef mij zon",
-    "votes": []
+    "votes": [
+      "Alsjeblieft geef mij zon",
+      "Niet zoveel"
+    ]
   }
 ]

@@ -204,6 +204,8 @@ fieldset h3 {
     height: 4rem;
     position: absolute;
     width: 46%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     pointer-events: none;
     border: none;
@@ -401,9 +403,4 @@ body > button::after {
         top: calc(20vh - 2rem);
         height: 4rem;
     }
-}
-
-.container { 
-    margin: 150px auto; 
-    text-align: center; 
 }

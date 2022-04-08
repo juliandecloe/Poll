@@ -40,10 +40,61 @@ Once you have achieved the core functionality of your website, you can please th
 
 ### Progressive Enhancement for poll
 
-### Scroll To Top
-I made a simple button that makes sure the user can go back up to the top of the page after scrolling for a while.
+#### Scroll To Top
+I made a simple button that makes sure the user can go back up to the top of the page after scrolling for a while. I used `scrollTo` to set the new scrollposition.
+
+```
+function scrollingTop() {
+    scrollBtn.classList.add('to-top')
+    window.scrollTo(0, 0);
+    setTimeout(function() { scrollBtn.classList.remove('to-top') }, 2000);
+}
+
+scrollBtn.addEventListener('click', function() {
+    scrollingTop();
+});
+
+window.addEventListener('scroll', () => {
+    if(window.location.pathname === "/") {
+        if (window.scrollY < 50) {
+            scrollBtn.classList.remove('show');
+        } else {
+            scrollBtn.classList.add('show'); 
+        }
+    } 
+});
+```
 
 ![ScrollToTop](proces/scrolltop.gif)
+
+#### Darkmode
+For the users that don't like a light themed website, I also made a dark mode option. To make sure it stays dark on every page and also on reload, I used `localStorage` as a checker to see if the darkmode option has been selected before. Everytime the users comes to the website, the website will still be darkmode.
+
+```
+let localDarkMode = localStorage.getItem('Dark Mode');
+
+if(localDarkMode === 'on') {
+    document.body.classList.add('darkmode');
+    darkmodeSVG.forEach(svg => svg.classList.toggle('hide'));
+}
+
+function darkMode() {
+    darkmodeSVG.forEach(svg => svg.classList.toggle('hide'));
+    document.body.classList.toggle('darkmode');
+    if(localDarkMode === 'on') {
+        localDarkMode = 'off';
+    } else {
+        localDarkMode = 'on';
+    }
+    console.log(localDarkMode)
+    localStorage.setItem('Dark Mode', localDarkMode);
+}
+
+darkmodeBtn.addEventListener('click', darkMode);
+```
+
+![Darkmode](proces/darkmode.gif)
+
 
 
 
