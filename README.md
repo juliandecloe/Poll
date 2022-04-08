@@ -12,8 +12,8 @@ For the last assignment I had the opportunity to choose between a few cases. I c
 - [Feature Detection](#feature-detection)
 
 
-## Demo (only local)
-*Only available on friday april 7th 2022*
+## Demo
+[Heroku: collegepoll](https://collegepoll.herokuapp.com/)
 
 
 ## User Story
