@@ -145,7 +145,32 @@ progress::-webkit-progress-bar-value {
 
 Note that the progressbar itself is supported by [Firefox](https://www.mozilla.org/nl/firefox/new/) and Internet Explorer, but styling sadly isn't. It has a default styling that can't be changed. But on every other browser you can!
 
+### CSS: @support
+Internet Explorer is a terrible browser. They don't support `appearance` to hide the `<input>` for the user. That means on Internet Explorer the `<input>` is in front of the text of the label. Because of that the answers can't be read by the user. So I use `@supports` to check if the browser supports `appearance`. Otherwise the `z-index` is set to -1.
 
+```
+.answers input {
+    height: 4rem;
+    position: absolute;
+    width: 46%;
+    z-index: -1;
+    pointer-events: none;
+    border: none;
+}
+
+@supports (appearance: none) {
+    .answers input {
+        height: 4rem;
+        position: absolute;
+        width: 46%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        pointer-events: none;
+        border: none;
+    }
+}
+```
 
 
 
