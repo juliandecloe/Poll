@@ -204,11 +204,22 @@ fieldset h3 {
     height: 4rem;
     position: absolute;
     width: 46%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    z-index: -1;
     pointer-events: none;
     border: none;
+}
+
+@supports (appearance: none) {
+    .answers input {
+        height: 4rem;
+        position: absolute;
+        width: 46%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        pointer-events: none;
+        border: none;
+    }
 }
 
 *:focus {
