@@ -42,8 +42,8 @@ Once you have achieved the core functionality of your website, you can please th
 
 ### Scroll To Top
 I made a simple button that makes sure the user can go back up to the top of the page after scrolling for a while.
- 
-- ![ScrollToTop](proces/scrolltop.mov)
+
+- ![ScrollToTop](proces/scrolltop.gif)
 
 
 
