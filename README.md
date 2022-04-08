@@ -8,6 +8,7 @@ For the last assignment I had the opportunity to choose between a few cases. I c
 - [Demo](#wireflow)
 - [Core Functionality](#core-functionality)
 - [Progressive Enhancement](#progressive-enhancement)
+- [Feature Detection](#feature-detection)
 
 ## Demo (only local)
 *Only available on friday april 7th 2022*
@@ -39,6 +40,10 @@ It doesn't matter if javascript or css is disabled. These functions should alway
 Once you have achieved the core functionality of your website, you can please the users using browsers with additional browser features by giving them extra features and styling that older or less advanced broswers don't have. It is a luxury really... but don't we love luxery!
 
 ### Progressive Enhancement for poll
+
+#### Styling
+The user story is for the teacher and the students. Students are mostly younger. A lot of young people like modern websites. This is the reason why kept my website as clean as possible, to give them a pleasant experience. I chose the color blue because it was the first color that came in mind when I thought about polls. I kept the styling pretty much the same as the styling in the [wireflow](#wireflow).
+
 
 #### Scroll To Top
 I made a simple button that makes sure the user can go back up to the top of the page after scrolling for a while. I used `scrollTo` to set the new scrollposition.
@@ -94,6 +99,21 @@ darkmodeBtn.addEventListener('click', darkMode);
 ```
 
 ![Darkmode](proces/darkmode.gif)
+
+
+## Feature Detection
+Browsers have a lot of features, but not all browsers have the same features. The problem with that is that not every code you write is acceptable for every browser. Some browsers are less advanced than others.
+
+There is a great website, [Can I Use?](https://caniuse.com/), that shows you what features ar supported on what browsers. During this project I used this site a **LOT** to check if I could use for example a specific selector, property, value, function, etc. So I programmed really carefully to make sure that most things that I use are actually supported on most browsers.
+
+### Appearance
+The CSS property `appearance` is quite well supported following the advise of [Can I Use?](https://caniuse.com/). The only problem I saw, was that on safari the appearance wasn't hidden using `appearance: none;`. On [Stack Overflow](https://stackoverflow.com/questions/47127201/webkit-appearance-none-not-working-for-button) someone had the same problem. Luckely there was a simple answer. I just had to add the `webkit` & `moz` versions as well to make sure it was supported on every device. It looks as following:
+```
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+```
+
 
 
 

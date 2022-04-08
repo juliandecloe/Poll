@@ -1,6 +1,8 @@
 const darkmodeBtn = document.querySelector('header button');
 const darkmodeSVG = document.querySelectorAll('header button svg');
 
+darkmodeBtn.classList.remove('hide');
+
 let localDarkMode = localStorage.getItem('Dark Mode');
 
 if(localDarkMode === 'on') {
