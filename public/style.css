@@ -250,7 +250,8 @@ fieldset h3 {
     cursor: pointer;
     text-align: center;
     display: flex;
-    vertical-align: center;
+    justify-content: center;
+    align-items: center;
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
