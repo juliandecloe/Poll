@@ -35,6 +35,16 @@ It doesn't matter if javascript or css is disabled. These functions should alway
 
 ## Progressive Enhancement
 
+### What is Progressive Enhancement?
+Once you have achieved the core functionality of your website, you can please the users using browsers with additional browser features by giving them extra features and styling that older or less advanced broswers don't have. It is a luxury really... but don't we love luxery!
+
+### Progressive Enhancement for poll
+
+### Scroll To Top
+I made a simple button that makes sure the user can go back up to the top of the page after scrolling for a while.
+ 
+- ![ScrollToTop](proces/scrolltop.mov)
+
 
 
 

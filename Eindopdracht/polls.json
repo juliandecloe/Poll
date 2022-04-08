@@ -28,8 +28,74 @@
     "votes": [
       "Ja",
       "Ja, ultieme nerd",
-      "Ja, ultieme nerd",
-      null
+      "Ja, ultieme nerd"
     ]
+  },
+  {
+    "pollID": "6e19799e-503b-419f-81e7-55f385503606",
+    "creator": "Julian",
+    "question": "Hoe lang is een chinees?",
+    "answerA": "Dat klopt",
+    "answerB": "1.65?",
+    "votes": []
+  },
+  {
+    "pollID": "4afb75a2-2830-40c5-b56b-19532634a330",
+    "creator": "",
+    "question": "CSS of Javascript? <3",
+    "answerA": "CSS",
+    "answerB": "Javascript",
+    "votes": []
+  },
+  {
+    "pollID": "06997fc7-550a-4a48-840e-fa3806008436",
+    "creator": "Snackbar",
+    "question": "Patat of Friet?",
+    "answerA": "Friet",
+    "answerB": "Patat",
+    "votes": []
+  },
+  {
+    "pollID": "ea7b6615-f60f-4131-a509-a00fd0eb494f",
+    "creator": "Pizzaria",
+    "question": "Ananas op pizza?",
+    "answerA": "GADVERDAMME",
+    "answerB": "Ja is gewoon lekker toch?",
+    "votes": []
+  },
+  {
+    "pollID": "e820d72c-2f45-4b33-b0a0-2c01745e2584",
+    "creator": "",
+    "question": "Netflix of Disney+",
+    "answerA": "Netflix",
+    "answerB": "Disney+",
+    "votes": [
+      "Disney+",
+      "Disney+",
+      "Netflix",
+      "Disney+",
+      "Disney+",
+      "Disney+",
+      "Disney+",
+      "Disney+",
+      "Netflix",
+      "Netflix"
+    ]
+  },
+  {
+    "pollID": "d10d0cb4-366c-4a1f-a556-718820bfb3b3",
+    "creator": "",
+    "question": "Messi of Ronaldo?",
+    "answerA": "Messi",
+    "answerB": "Ronaldo",
+    "votes": []
+  },
+  {
+    "pollID": "1c63644f-9f0e-453f-a9df-5cd40bc32fbf",
+    "creator": "",
+    "question": "Hoeveel zin heb je in de zomer?",
+    "answerA": "Niet zoveel",
+    "answerB": "Alsjeblieft geef mij zon",
+    "votes": []
   }
 ]

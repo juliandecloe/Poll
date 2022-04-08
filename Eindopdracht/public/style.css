@@ -2,6 +2,7 @@
     font-family: 'Raleway', sans-serif;
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -11,6 +12,10 @@ body {
     align-items: center;
 }
 
+.darkmode {
+    background: #1d1d1d;
+}
+
 header {
     padding: 1rem 5vw;
     display: flex;
@@ -18,10 +23,33 @@ header {
     align-items: center;
 }
 
+header button {
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+}
+
+header button svg:last-child path {
+    fill: #987ce2;
+}
+
+.hide {
+    display: none;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.darkmode nav a path {
+    fill: #987ce2;
 }
 
 main {
@@ -36,15 +64,31 @@ header a {
     color: #391599; 
 }
 
+.darkmode header a{
+    color: #987ce2;
+}
+
 h1 {
     font-weight: bold;
     padding-bottom: 4px;
     border-bottom: 4px solid #391599;
 }
 
+.darkmode h1 {
+    border-bottom: 4px solid #987ce2; 
+}
+
 h2 {
     margin: 1rem 0;
     color: #391599; 
+}
+
+.darkmode h2 {
+    color: #987ce2; 
+}
+
+.darkmode h3 {
+    color: #987ce2;
 }
 
 form {
@@ -59,12 +103,24 @@ form {
     display: inline-block;
 }
 
+.darkmode label {
+    color: #987ce2; 
+}
+
 .admin input {
     padding: .7rem;
     border: 1px solid #391599;
     border-radius: 6px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
     box-sizing: border-box;
+}
+
+.darkmode .admin input {
+    border: 1px solid #987ce2;
+}
+
+.darkmode .admin input::placeholder {
+    color: #987ce2;
 }
 
 .admin fieldset {
@@ -89,8 +145,16 @@ form {
     cursor: pointer;
 }
 
+.darkmode fieldset button {
+    background-color: #987ce2;
+}
+
 .admin fieldset button:hover {
     background-color: #5c29eb;
+}
+
+.darkmode fieldset button:hover {
+    background-color: #987ce2;
 }
 
 fieldset {
@@ -98,6 +162,10 @@ fieldset {
     border-radius: 25px;
     padding-top: 1rem;
     margin-bottom: 1rem;
+}
+
+.darkmode fieldset {
+    border: 2px solid #987ce2;
 }
 
 fieldset h3 {
@@ -124,16 +192,25 @@ fieldset h3 {
     margin-right: .5rem;
 }
 
+.darkmode .author p {
+    color: #987ce2;
+}
+
+.darkmode .author circle:first-of-type {
+    fill: #987ce2;
+}
+
 .answers input {
     height: 4rem;
     position: absolute;
     width: 46%;
     appearance: none;
     pointer-events: none;
+    border: none;
 }
 
 *:focus {
-    outline: 3px solid yellow;
+    outline: 3px solid rgb(228, 172, 70);
 }
 
 *:hover {
@@ -166,8 +243,16 @@ fieldset h3 {
     hyphens: auto;
 }
 
+.darkmode .answers label {
+    background-color: #987ce2;
+}
+
 .answers label:hover {
     background-color: #5c29eb;
+}
+
+.darkmode .answers label:hover {
+    background-color: #987ce2;
 }
 
 .answers label:first-of-type {
@@ -187,6 +272,10 @@ fieldset h3 {
 
 footer {
     padding: 2rem 0 4rem 0;
+}
+
+.darkmode footer {
+    color: #987ce2;
 }
 
 .results h3 {
@@ -223,5 +312,98 @@ progress::-webkit-progress-value {
     background-color: #391599; 
 }
 
+.darkmode progress {
+    background-color: #1d1d1d;
+}
 
+.darkmode progress::-webkit-progress-bar {
+    background-color: #1d1d1d;
+    border: 3px solid #987ce2;
+}
 
+.darkmode progress::-webkit-progress-value {
+    background-color: #987ce2;
+}
+
+body > button {
+    background-color: #391599;
+    border: none;
+    width: 4rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 100px;
+    cursor: pointer;
+    transform-origin: bottom;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 5;
+    transition: 1s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+body > button::before, body > button::after {
+    content: "";
+    display: block;
+    background-color: white;
+    width: 4px;
+    height: 24px;
+    transition: .5s ease-in;
+    transform-origin: center top;
+    position: absolute;
+    border-radius: 50px;
+    top: 1.2rem;
+}
+
+.darkmode > button {
+    background-color: #987ce2;
+}
+
+body > button::before {
+    transform: rotate(45deg);
+    left: 31px;
+}
+
+body > button::after {
+    transform: rotate(-45deg);
+    right: 31px;
+}
+
+.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.to-top {
+    animation: scroll 1.5s ease-out forwards;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 1; 
+        height: 4rem;
+    }
+    20% {
+        opacity: 1; 
+        height: 80vh;
+    }
+    60% {
+        opacity: 0;
+        top: calc(20vh - 2rem);
+        height: 4rem;
+        opacity: 1; 
+    }
+    100% {
+        opacity: 0;
+        top: calc(20vh - 2rem);
+        height: 4rem;
+    }
+}
+
+.container { 
+    margin: 150px auto; 
+    text-align: center; 
+}
